@@ -1,0 +1,14 @@
+setup.py
+jumia_spider/__init__.py
+jumia_spider/items.py
+jumia_spider/middlewares.py
+jumia_spider/pipelines.py
+jumia_spider/settings.py
+jumia_spider/spiders/__init__.py
+jumia_spider/spiders/computers.py
+jumia_spider/spiders/womens_fashion.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
