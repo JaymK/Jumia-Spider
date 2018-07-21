@@ -1,3 +1,4 @@
+README.md
 setup.py
 jumia_spider/__init__.py
 jumia_spider/items.py
@@ -5,7 +6,12 @@ jumia_spider/middlewares.py
 jumia_spider/pipelines.py
 jumia_spider/settings.py
 jumia_spider/spiders/__init__.py
+jumia_spider/spiders/babies.py
 jumia_spider/spiders/computers.py
+jumia_spider/spiders/females.py
+jumia_spider/spiders/males.py
+jumia_spider/spiders/phones.py
+jumia_spider/spiders/products.py
 jumia_spider/spiders/womens_fashion.py
 project.egg-info/PKG-INFO
 project.egg-info/SOURCES.txt

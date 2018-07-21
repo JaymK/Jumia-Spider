@@ -3,10 +3,11 @@ import scrapy
 from time import sleep
 import random
 
-class ComputersSpider(scrapy.Spider):
-    name = 'computers'
-    allowed_domains = ['jumia.ug/computing/']
-    start_urls = ['https://jumia.ug/computing/']
+
+class BabiesSpider(scrapy.Spider):
+    name = 'babies'
+    allowed_domains = ['jumia.ug/baby-kids-toys/']
+    start_urls = ['https://jumia.ug/baby-kids-toys/']
 
     def parse(self, response):
         products = response.xpath('//*[@class="sku -gallery"]')
@@ -48,3 +49,4 @@ class ComputersSpider(scrapy.Spider):
         next_page_url = response.xpath('//*[@title="Next"]/@href').extract_first()
         abs_url = response.urljoin(next_page_url)
         yield scrapy.Request(abs_url, dont_filter=True)
+

@@ -1,3 +1,5 @@
+import os
+import configparser
 # -*- coding: utf-8 -*-
 
 # Scrapy settings for jumia_spider project
@@ -67,6 +69,17 @@ DOWNLOAD_DELAY = 3
 #ITEM_PIPELINES = {
 #    'jumia_spider.pipelines.JumiaSpiderPipeline': 300,
 #}
+
+ITEM_PIPELINES = {
+   'jumia_spider.pipelines.MongoPipeline': 300,
+}
+
+config = configparser.ConfigParser()
+config.read(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'settings.cfg'))
+mlab_uri = config.get('MongoDB', 'mlab_uri')
+
+MONGO_URI = mlab_uri
+MONGO_DATABASE = 'humans_of_uganda'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

@@ -3,10 +3,11 @@ import scrapy
 from time import sleep
 import random
 
-class ComputersSpider(scrapy.Spider):
-    name = 'computers'
-    allowed_domains = ['jumia.ug/computing/']
-    start_urls = ['https://jumia.ug/computing/']
+
+class PhonesSpider(scrapy.Spider):
+    name = 'phones'
+    allowed_domains = ['jumia.ug/mobile-phones/']
+    start_urls = ['https://www.jumia.ug/mobile-phones/']
 
     def parse(self, response):
         products = response.xpath('//*[@class="sku -gallery"]')
@@ -29,9 +30,10 @@ class ComputersSpider(scrapy.Spider):
                 pdt_current_px = pdt_current_px.replace(',', '')
 
                 amnt_cut = int(pdt_old_px) - int(pdt_current_px)
+
                 pdt_discount = int(pdt_discount.replace('%', '')) * -1
                 pdt_title = pdt_title.lower()
-
+                
                 yield{
                 'name': pdt_title,
                 'img_link': pdt_img_link,
