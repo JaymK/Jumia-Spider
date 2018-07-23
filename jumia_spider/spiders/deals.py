@@ -3,11 +3,11 @@ import scrapy
 from time import sleep
 import random
 
-# This spider crawl the female section on jumia
-class FemalesSpider(scrapy.Spider):
-    name = 'females'
-    allowed_domains = ['jumia.ug/women-s-fashion/']
-    start_urls = ['http://jumia.ug/women-s-fashion/']
+
+class DealsSpider(scrapy.Spider):
+    name = 'deals'
+    allowed_domains = ['jumia.ug/deals-of-the-week/']
+    start_urls = ['http://jumia.ug/deals-of-the-week/']
 
     def parse(self, response):
         products = response.xpath('//*[@class="sku -gallery -validate-size "]')

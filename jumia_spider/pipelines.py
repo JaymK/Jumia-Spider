@@ -7,7 +7,7 @@ class MongoPipeline(object):
 
 # Change this depending on the spider your running
 # collection array = computers, phones, babies, malegifts, femalegifts, products, deals
-    collection_name = 'computers'
+    collection_name = 'deals'
 
     def __init__(self, mongo_uri, mongo_db):
         self.mongo_uri = mongo_uri
